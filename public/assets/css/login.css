@@ -1,0 +1,44 @@
+body {
+    background-color: #1e1e1e !important;
+    font-family: Arial, sans-serif;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 400px;
+    background-color: #1e1e1e !important;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.login-card .logo {
+    width: 75px;
+    height: 75px;
+}
+
+.login-card .form-label {
+    font-weight: bold;
+    color: #333333;
+}
+
+.login-card .form-control,
+.login-card .form-control::placeholder {
+    border-radius: 0;
+    background-color: #515359 !important;
+    color: #9d9a9a !important;
+}
+
+.login-card .btn-custom {
+    background-color: #aa0000;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 0;
+    width: 48%; /* Ensure buttons fit within the container */
+    text-align: center;
+}
+
+.login-card .btn-custom:hover {
+    background-color: #cc0000;
+    color: #ffffff;
+}

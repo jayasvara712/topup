@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ApiController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +15,23 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
+});
+Route::get('/detail', function () {
+    return view('detail_product');
+});
+Route::get('/detail_transaction', function () {
+    return view('detail_transaction');
+});
+Route::get('/reseller', function () {
+    return view('register_reseller');
+});
+Route::get('/user', function () {
+    return view('register_user');
+});
+Route::get('/login', function () {
+    return view('login');
+});
+Route::get('/terms_condition', function () {
+    return view('terms_condition');
 });

@@ -1,0 +1,1772 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #1e1e1e !important; /* Ensure background color is applied */
+}
+
+.navbar-custom {
+    background-color: #131316;
+    height: 60px; /* Ensure the navbar height is consistent */
+}
+
+@media (max-width: 970px) {
+    .navbar-collapse {
+        background-color: #1e1e1e;
+        padding-bottom: 10px;
+    }
+}
+
+.nav-link,
+.form-control {
+    color: #ffffff !important;
+}
+
+.navbar-brand img {
+    height: 40px; /* Fixed height for the logo */
+}
+
+.search-box {
+    position: relative;
+    width: 100%; /* Make the search form responsive */
+    max-width: 333px; /* Set a max-width */
+}
+
+.search-box input {
+    background-color: #515359; /* Background color for the search form */
+    color: #393a41; /* Text color for the search form */
+    padding-left: 30px; /* Adjust padding for the icon */
+    border: none;
+    width: 100%; /* Make input take full width of .search-box */
+}
+
+.search-box input::placeholder {
+    color: #393a41; /* Placeholder text color */
+}
+
+.search-box input:focus {
+    background-color: #515359; /* Background color for the search form when typing */
+    color: #393a41; /* Text color for the search form when typing */
+    outline: none; /* Remove default outline */
+    box-shadow: none; /* Remove default box-shadow */
+}
+
+.search-box .fa-search {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #393a41; /* Icon color */
+}
+
+.promo-icon,
+.currency-icon {
+    color: #aa0000; /* Icon color */
+    margin-right: 5px; /* Adjust spacing as needed */
+}
+
+.btn-login {
+    border: none;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none; /* Remove underline */
+    padding: 10px 20px;
+}
+
+.btn-login:hover {
+    background-color: #900000; /* Slightly darker color on hover */
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+    margin-right: auto; /* Push items to the left */
+}
+
+.navbar-nav .nav-item {
+    margin-right: 15px; /* Adjust spacing between items */
+}
+
+.navbar-nav .dropdown-menu {
+    background-color: #131316;
+    color: white;
+    margin-top: 0; /* Remove default margin to align with the button */
+}
+
+.navbar-nav .dropdown-item {
+    color: white;
+}
+
+.navbar-nav .dropdown-item:hover {
+    background-color: #515359;
+}
+
+.navbar-nav .nav-item:last-child {
+    margin-right: 0; /* No margin for the last item */
+}
+
+/* Responsive adjustments */
+@media (min-width: 992px) {
+    .btn-login {
+        position: fixed;
+        right: 10px; /* Adjust position as needed */
+        top: 10px; /* Adjust position as needed */
+        z-index: 1050; /* Ensure it stays on top of other elements */
+    }
+}
+
+@media (min-width: 1000px) {
+    .btn-login {
+        display: flex !important;
+        align-items: center; /* Center vertically */
+        justify-content: center; /* Center horizontally */
+        width: 80px;
+        height: 60px; /* Fill height of the navbar */
+        background-color: #aa0000;
+        border: none;
+        color: #ffffff;
+        text-align: center;
+        text-decoration: none; /* Remove underline */
+        position: absolute; /* Position absolutely */
+        right: 0; /* Align to the right */
+        top: 0; /* Align to the top */
+        bottom: 0; /* Align to the bottom */
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-nav {
+        flex-direction: column; /* Stack nav items vertically on smaller screens */
+        margin-right: 0; /* Remove margin for vertical layout */
+    }
+
+    .navbar-nav .nav-item {
+        margin-right: 0; /* No margin for vertical layout */
+        margin-bottom: 10px; /* Add space between items */
+    }
+
+    .navbar-nav .nav-item:last-child {
+        margin-bottom: 0; /* No margin for the last item */
+    }
+}
+
+.navbar-nav.ms-auto .nav-item {
+    margin-right: 20px; /* Add space between currency dropdown and login button */
+}
+
+.navbar-nav.ms-auto .nav-item:last-child {
+    margin-right: 0; /* Remove margin for the last item (login button) */
+}
+
+/* Default styling for navbar toggler icon */
+.navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"%3E%3Cpath d="M4 6h16M4 12h16m-7 6h7" /%3E%3C/svg%3E') !important;
+}
+
+/* Change color of navbar toggler icon to white for screens less than 1000px */
+@media (max-width: 999px) {
+    .navbar-toggler-icon {
+        background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"%3E%3Cpath d="M4 6h16M4 12h16m-7 6h7" /%3E%3C/svg%3E') !important;
+    }
+}
+
+/* carousel */
+.slider {
+    margin-bottom: 30px;
+    position: relative;
+}
+.slider .owl-item.active.center .slider-card {
+    transform: scale(1.15);
+    opacity: 1;
+    background: #ff9966; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+        to bottom,
+        #ff5e62,
+        #ff9966
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+        to bottom,
+        #ff5e62,
+        #ff9966
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #fff;
+}
+.slider-card {
+    background: #fff;
+    padding: 0px 0px;
+    margin: 50px 15px 30px 15px;
+    box-shadow: 0 15px 45px -20px rgb(0 0 0 / 73%);
+    transform: scale(0.9);
+    opacity: 0.5;
+    transition: all 0.3s;
+}
+
+.owl-nav .owl-prev {
+    position: absolute;
+    top: calc(50% - 25px);
+    left: 0;
+    opacity: 1;
+    font-size: 30px !important;
+    z-index: 1;
+}
+.owl-nav .owl-next {
+    position: absolute;
+    top: calc(50% - 25px);
+    right: 0;
+    opacity: 1;
+    font-size: 30px !important;
+    z-index: 1;
+}
+.owl-dots {
+    text-align: center;
+}
+.owl-dots .owl-dot {
+    height: 10px;
+    width: 10px;
+    border-radius: 10px;
+    background: #ccc !important;
+    margin-left: 3px;
+    margin-right: 3px;
+    outline: none;
+}
+.owl-dots .owl-dot.active {
+    background: #f44336 !important;
+}
+
+.more-info-box {
+    position: absolute;
+    bottom: 0; /* Position at the bottom of the image */
+    left: 0; /* Position at the left of the image */
+    background-color: #aa0000;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 0; /* No border radius */
+    font-size: 14px;
+    margin: 0; /* Remove margin */
+    width: auto; /* Adjust width as needed */
+}
+
+/* Categories Button Styles */
+.category-buttons-container {
+    display: flex;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent buttons from wrapping to the next line */
+    padding: 10px 0; /* Optional: Add vertical padding */
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+}
+
+.category-buttons-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+}
+
+.category-btn {
+    background-color: #131316; /* Background color for categories */
+    color: #ffffff; /* Text color */
+    border: none; /* Remove default border */
+    margin: 5px; /* Space between buttons */
+    font-size: 16px; /* Adjust font size as needed */
+    padding: 10px; /* Padding inside the button */
+    width: auto; /* Let buttons resize based on content */
+    text-align: center; /* Center the text */
+    flex: 0 0 auto; /* Prevent flex-grow and flex-shrink */
+}
+
+.category-btn:hover {
+    background-color: #1a1a1a; /* Slightly lighter on hover */
+    text-decoration: none; /* Remove underline on hover */
+}
+
+/* Active Category Button Styles */
+.category-btn.active {
+    background-color: #aa0000 !important; /* Active background color */
+    color: #ffffff; /* Text color for active category */
+}
+
+/* Product Card Styles */
+.product-card {
+    display: none; /* Hide all product cards initially */
+    width: 100%; /* Full width */
+    max-width: 100%; /* Ensure it doesn't exceed parent width */
+    height: auto; /* Adjust height automatically */
+    overflow: hidden; /* Hide overflow */
+    margin-bottom: 20px; /* Space between cards */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    border: 5px solid #666666; /* Outline color and thickness */
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+    position: relative; /* Ensure child elements are positioned relative to this card */
+}
+
+.product-card:hover {
+    border: 5px solid #aa0000;
+}
+
+.product-card img {
+    width: 100%; /* Full width */
+    height: auto; /* Auto height to maintain aspect ratio */
+    object-fit: cover; /* Ensure the image covers the card */
+}
+
+.product-card .card-body {
+    position: absolute;
+    bottom: 0; /* Position at the bottom of the card */
+    left: 50%;
+    transform: translateX(-50%); /* Center the button horizontally */
+    padding: 0; /* Remove padding */
+    text-align: center;
+    width: 100%; /* Ensure the button spans the full width */
+    display: none; /* Initially hide the button */
+}
+
+.product-card:hover .card-body {
+    display: flex; /* Display the button on hover */
+    justify-content: center; /* Center the button */
+}
+
+.product-card .btn-primary {
+    width: 100px; /* Fixed width for the button */
+    background-color: #aa0000; /* Button color */
+    border-color: #aa0000; /* Border color */
+    border-radius: 0; /* Remove border radius */
+    margin-bottom: 0; /* Ensure no margin at the bottom */
+}
+
+.product-card .btn-primary:hover {
+    background-color: #900000; /* Slightly darker color on hover */
+    border-color: #900000; /* Border color on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .product-card {
+        width: 100%; /* Full width on smaller screens */
+        max-width: 100%; /* Ensure it doesn't exceed parent width */
+    }
+}
+
+/* View All Button Styles */
+.view-all-container {
+    margin-top: 20px; /* Space from the product list */
+    text-align: center; /* Center the button */
+}
+
+.view-all-btn {
+    color: #ffffff; /* Button text color */
+    border: none; /* Remove default border */
+    padding: 10px 20px; /* Padding inside the button */
+    font-size: 17px; /* Adjust font size */
+    border-radius: 5px; /* Rounded corners */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px; /* Space between text and icon */
+    text-decoration: none;
+    display: none; /* Initially hide the button */
+}
+
+.view-all-btn i {
+    color: #aa0000; /* Icon color */
+}
+
+.view-all-btn:hover {
+    color: #ffffff;
+    text-decoration: none; /* Remove underline on hover */
+}
+
+/* product detail */
+.product-detail-row {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+.product-detail-column {
+    height: 320px; /* Fixed height */
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+}
+.product-detail-image-container {
+    width: 244px; /* Fixed width for the first column */
+    padding-right: 20px; /* Adjust padding as needed */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+.product-detail-description-container,
+.product-detail-testimonial-container {
+    flex: 1; /* Fill available width */
+}
+.product-detail-description-container {
+    background-color: #28292c; /* Set background color for the second column */
+}
+.product-detail-testimonial-container {
+    background-color: #131316; /* Set background color for the third column */
+    position: relative; /* Needed for sticky positioning */
+}
+.product-detail-image {
+    width: 100%; /* Ensure full width of the container */
+    height: 100%; /* Ensure full height */
+    border: 5px solid #aa0000;
+    box-sizing: border-box;
+}
+.product-detail-description {
+    padding: 50px;
+    color: white;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; /* Ensure full height */
+}
+.product-detail-description-box,
+.product-detail-testimonial-box-title {
+    background-color: #515359;
+    color: white;
+    width: 140px;
+    padding: 5px;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 0px;
+    margin-left: -10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.product-detail-testimonial-box-title {
+    position: absolute;
+    margin-left: 0;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.product-detail-heading {
+    font-size: 32px;
+    font-weight: 700;
+}
+.product-detail-subheading {
+    color: #aa0000;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+.product-detail-full-description {
+    font-size: 10px;
+    text-align: justify;
+}
+.product-detail-testimonial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    height: 100%; /* Ensure full height */
+    overflow-y: auto; /* Allow vertical scrolling if needed */
+}
+.product-detail-testimonial-box {
+    width: 100%; /* Full width of the container */
+    max-width: 350px; /* Max width for larger screens */
+    background-color: #2c2c2c; /* Slightly lighter background color for contrast */
+    color: white;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+.testimonial-name {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.testimonial-stars {
+    color: #ffcc00; /* Gold color for stars */
+    margin-bottom: 10px;
+}
+.testimonial-description {
+    font-size: 12px;
+    text-align: justify;
+}
+.product-detail-button {
+    background-color: transparent;
+    border: 1px solid #aa0000;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 8px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin: 10px auto;
+    display: block;
+    width: fit-content;
+    text-decoration: none;
+}
+.product-detail-button:hover {
+    color: #ffffff;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .row {
+        width: none;
+    }
+    .product-detail-description {
+        padding: 0;
+    }
+    .product-detail-description-box {
+        position: inherit;
+    }
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+    .product-detail-row {
+        flex-direction: column; /* Stack columns vertically on smaller screens */
+    }
+    .product-detail-column {
+        padding: 10px; /* Add padding for smaller screens */
+        width: 100%; /* Ensure full width for each column */
+    }
+    .product-detail-image-container {
+        width: 100%; /* Full width for image container */
+        padding-right: 0; /* Remove padding on mobile */
+    }
+    .product-detail-description-container {
+        margin: 10px 0; /* Add margin around description container */
+    }
+    .product-detail-description-box {
+        margin-top: -10px;
+    }
+    .product-detail-testimonial-container {
+        margin: 10px 0; /* Add margin around testimonial container */
+    }
+    .product-detail-testimonial {
+        height: 300px; /* Adjust height for testimonial container */
+    }
+}
+
+/* Price List Styles */
+.price-list {
+    background-color: #28292c; /* Background color for the price list */
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px; /* Add margin between items */
+}
+
+.price-list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* Stretch items to same height */
+    padding: 10px;
+    transition: outline 0.3s; /* Smooth transition for outline change */
+}
+
+.price-list.active {
+    outline: 2px solid #aa0000; /* Red outline when active */
+}
+
+.price-list-text,
+.price-list-price {
+    color: white;
+    flex: 1; /* Allow these elements to take up remaining space */
+}
+
+.price-list-price {
+    font-weight: bold;
+    text-align: center; /* Center align price text */
+}
+
+/* Total Price */
+.total-price-section {
+    margin-top: 20px; /* Space above the total price section */
+}
+
+.total-price-text {
+    font-size: 14px;
+    border-bottom: 1px solid #aa0000; /* Red bottom line */
+    padding-bottom: 5px; /* Space below the text */
+    color: white; /* Text color */
+}
+
+.price {
+    font-size: 24px;
+    margin: 5px 0; /* Space above and below the price */
+    color: white; /* Text color */
+}
+
+.small-text {
+    font-size: 12px;
+    color: white; /* Text color */
+}
+/* end total price */
+
+.cart-button,
+.xmark-button {
+    background-color: #aa0000;
+    border: none;
+    color: white;
+    width: 20%;
+    height: 100%; /* Make button full height of parent */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cart-button i,
+.xmark-button i {
+    color: white;
+}
+
+.xmark-button {
+    display: none; /* Hide cross button by default */
+}
+
+/* Customer Service Card Styles */
+.customer-service-card {
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 20px;
+    box-sizing: border-box;
+}
+
+.customer-service-icon {
+    font-size: 55px;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.customer-service-heading {
+    font-size: 32px;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.customer-service-description {
+    font-size: 12px;
+    color: white;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.customer-service-button {
+    background-color: #aa0000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto; /* Center align the button */
+}
+
+.customer-service-button-icon {
+    margin-right: 10px;
+}
+
+.customer-service-button:hover {
+    background-color: #900;
+}
+
+.account-details {
+    background-color: #131316; /* Background color for the account details */
+    padding: 20px;
+    border-radius: 5px;
+    color: white;
+}
+
+.account-details h4 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.account-details p {
+    font-size: 14px;
+}
+
+.detail-akun-box {
+    background-color: #515359; /* Background color for the detail akun box */
+    color: white; /* Text color */
+    padding: 12px;
+    width: 174px; /* Fixed width for the detail akun box */
+    margin-bottom: 15px; /* Space below the detail akun box */
+    margin-top: -20px;
+    margin-left: -20px;
+    text-align: center; /* Center text */
+    font-size: 16px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px; /* Space between form groups */
+}
+
+.form-label {
+    background-color: #515359; /* Background color for the label */
+    color: white; /* Text color for the label */
+    padding: 12px;
+    width: 80px; /* Fixed width for the label */
+    text-align: center; /* Align text to the right within the label */
+    box-sizing: border-box;
+    margin-right: 0; /* Remove right margin to ensure no space between label and input */
+    margin-bottom: 0 !important;
+    height: 46px;
+    font-size: 12px;
+}
+.invoice .form-label {
+    background-color: #131316; /* Background color for the label */
+    color: white; /* Text color for the label */
+    padding: 12px;
+    width: 250px; /* Fixed width for the label */
+    text-align: center; /* Align text to the right within the label */
+    box-sizing: border-box;
+    margin-right: 0; /* Remove right margin to ensure no space between label and input */
+    margin-bottom: 0 !important;
+    height: 60px;
+    font-size: 10px;
+}
+
+.form-input {
+    background-color: #28292c; /* Background color for the input fields */
+    color: white; /* Text color for the input fields */
+    border: 1px solid #444; /* Border color */
+    padding: 10px;
+    flex: 1; /* Allow input fields to take remaining space */
+    box-sizing: border-box;
+    margin-left: 0; /* Remove left margin to ensure no space between label and input */
+    height: 100%;
+}
+
+.invoice .form-input {
+    background-color: #515359; /* Background color for the input fields */
+    color: white; /* Text color for the input fields */
+    border: 1px solid #444; /* Border color */
+    padding: 10px;
+    height: 60px;
+    flex: 1; /* Allow input fields to take remaining space */
+    box-sizing: border-box;
+    margin-left: 0; /* Remove left margin to ensure no space between label and input */
+}
+
+.invoice {
+    margin: 5vb 0 5vb 0;
+}
+
+@media (min-width: 768px) {
+    .invoice {
+        margin: 8vb 3vb 8vb 3vb;
+    }
+
+    .invoice .form-label {
+        background-color: #131316; /* Background color for the label */
+        color: white; /* Text color for the label */
+        padding: 12px;
+        width: 250px; /* Fixed width for the label */
+        text-align: center; /* Align text to the right within the label */
+        box-sizing: border-box;
+        margin-right: 0; /* Remove right margin to ensure no space between label and input */
+        margin-bottom: 0 !important;
+        height: 100%;
+        font-size: 12px;
+    }
+
+    .invoice .form-input {
+        background-color: #515359; /* Background color for the input fields */
+        color: white; /* Text color for the input fields */
+        border: 1px solid #444; /* Border color */
+        padding: 10px;
+        height: 100%;
+        flex: 1; /* Allow input fields to take remaining space */
+        box-sizing: border-box;
+        margin-left: 0; /* Remove left margin to ensure no space between label and input */
+    }
+}
+
+.form-input::placeholder {
+    color: #aaa; /* Placeholder text color */
+}
+
+.form-button {
+    background-color: #aa0000; /* Background color for the button */
+    color: white; /* Text color for the button */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.form-button:hover {
+    background-color: #900; /* Darker shade on hover */
+}
+
+/* Responsive Adjustments */
+@media (min-width: 1024px) {
+    .cart-button,
+    .xmark-button {
+        width: 64px;
+        height: 64px;
+        margin: -20px -20px -20px 10px; /* Adjust margin for mobile view */
+    }
+}
+@media (max-width: 1023px) {
+    .cart-button,
+    .xmark-button {
+        width: 64px;
+        height: 64px;
+        margin: -20px -20px -20px 10px; /* Adjust margin for mobile view */
+    }
+}
+
+/* Payment Box Styles */
+.payment-box {
+    height: 60px;
+    background-color: #28292c;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent; /* Default border color */
+    margin-bottom: 15px; /* Space below the box */
+    cursor: pointer; /* Indicate that it's clickable */
+    transition: border-color 0.3s; /* Smooth transition for border color change */
+}
+
+.payment-box.active {
+    border-color: #aa0000; /* Red outline when active */
+}
+
+/* About Us Section */
+.about-us-section {
+    position: relative;
+    width: 100%;
+    min-height: 600px; /* Minimum height to ensure it scales */
+    background: url(/assets/img/Banner-about-us.gif) center/cover no-repeat;
+    color: #ffffff; /* Text color */
+}
+
+.about-us-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+}
+
+.about-us-content {
+    position: relative;
+    z-index: 1; /* Ensure content is above the overlay */
+    width: 100%; /* Full width */
+    padding: 20px; /* Add padding for better spacing on smaller screens */
+}
+
+.about-us-header h1,
+.about-us-header h2 {
+    font-size: 96px; /* Font size for larger screens */
+    margin-bottom: 20px; /* Space below the heading */
+    position: relative;
+    z-index: 2; /* Ensure text is above the background text */
+}
+
+.about-us-header h1 {
+    color: #ffffff; /* White color for "About" */
+    margin-top: -80px;
+    margin-left: 0;
+}
+
+.about-us-header h2 {
+    color: #aa0000; /* Red color for "Us" */
+    margin-top: -80px;
+    margin-left: 230px;
+    z-index: 1;
+}
+
+.about-us-body h3 {
+    font-size: 36px; /* Font size for larger screens */
+    margin: 10px 0; /* Space around the title */
+    position: relative;
+    z-index: 3; /* Ensure it's above the background text */
+    color: #ffffff;
+}
+
+.about-us-body p {
+    font-size: 18px; /* Font size for larger screens */
+    margin: 0 0 40px 0; /* Remove default margin and add space below */
+    position: relative;
+    z-index: 3; /* Ensure it's above the background text */
+    color: #ffffff;
+}
+
+/* Services Section */
+.services-section {
+    padding: 60px 0; /* Add padding for spacing */
+    color: #ffffff; /* Text color */
+}
+
+.services-section h3 {
+    font-size: 36px; /* Font size for the section heading */
+    margin-bottom: 40px; /* Space below the heading */
+}
+
+.service-card {
+    border-radius: 10px; /* Rounded corners */
+    color: #ffffff; /* Text color */
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.service-card:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.service-icon {
+    font-size: 98px; /* Icon size */
+    margin-bottom: 15px; /* Space below the icon */
+    color: #fff; /* Icon color */
+}
+
+.service-card h4 {
+    font-size: 24px; /* Heading font size */
+    margin-bottom: 10px; /* Space below the heading */
+}
+
+.service-card p {
+    font-size: 16px; /* Description font size */
+    margin: 0; /* Remove default margin */
+}
+
+/* Media Queries for Smaller Screens */
+@media (max-width: 768px) {
+    .services-section h3 {
+        font-size: 28px; /* Smaller font size on small screens */
+    }
+
+    .service-card {
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+
+    .service-icon {
+        font-size: 40px; /* Smaller icon size on small screens */
+    }
+
+    .service-card h4 {
+        font-size: 20px; /* Smaller heading font size on small screens */
+    }
+
+    .service-card p {
+        font-size: 14px; /* Smaller description font size on small screens */
+    }
+}
+
+/* Media Queries for Smaller Screens */
+@media (max-width: 768px) {
+    .about-us-header h1 {
+        font-size: 48px; /* Smaller font size on small screens */
+        margin-top: -50px;
+        margin-left: 0;
+    }
+    .about-us-header h2 {
+        font-size: 48px; /* Smaller font size on small screens */
+        margin-top: -50px;
+        margin-left: 110px;
+    }
+
+    .about-us-body h3 {
+        font-size: 24px; /* Smaller font size on small screens */
+    }
+
+    .about-us-body p {
+        font-size: 14px; /* Smaller font size on small screens */
+    }
+}
+
+/* Join Now Section */
+.join-now-section {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Base height */
+    color: #ffffff; /* Text color */
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    overflow: hidden; /* Ensure content does not overflow */
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the entire section */
+    z-index: -1; /* Place the image behind the content */
+}
+
+@media (min-width: 768px) {
+    .floating-image {
+        position: absolute;
+        bottom: -800px; /* Adjust based on your design */
+        right: -70px; /* Adjust based on your design */
+        width: 664px; /* Adjust size as needed */
+        height: 1304px; /* Maintain aspect ratio */
+        z-index: 10; /* Ensure the floating image is above the background */
+    }
+}
+
+@media (max-width: 767px) {
+    .floating-image {
+        display: none;
+    }
+}
+
+.join-now-content {
+    position: relative;
+    z-index: 2; /* Ensure content is above the background image */
+    padding: 20px; /* Base padding */
+    text-align: left; /* Align text to the left */
+    max-width: 90%; /* Make content responsive */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+}
+
+.join-now-content h2 {
+    font-family: "Murecho", sans-serif; /* Apply Google Font */
+    font-size: 3rem; /* Responsive font size */
+    font-weight: 700;
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.join-now-content p {
+    font-size: 1.25rem; /* Responsive font size */
+    margin-bottom: 40px; /* Space below the description */
+}
+
+.join-now-content .btn-join {
+    background-color: #131316; /* Button background color */
+    color: #ffffff; /* Button text color */
+    font-size: 1.25rem; /* Responsive button font size */
+    padding: 12px 24px; /* Adjusted padding for consistency */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    cursor: pointer; /* Pointer cursor on hover */
+    display: inline-block; /* Make button inline-block */
+    margin-top: 20px; /* Space above the button */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    align-self: flex-start; /* Align button to the left */
+}
+
+.join-now-content .btn-join:hover {
+    background-color: #393a41; /* Slightly lighter color on hover */
+    color: #ffffff; /* Text color on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .join-now-content {
+        padding: 20px; /* Consistent padding for larger tablets and smaller desktops */
+    }
+
+    .join-now-content h2 {
+        font-size: 2.5rem; /* Slightly smaller font size for larger tablets */
+    }
+
+    .join-now-content p {
+        font-size: 1.125rem; /* Slightly smaller description font size for larger tablets */
+    }
+
+    .join-now-content .btn-join {
+        font-size: 1.125rem; /* Slightly smaller button font size for larger tablets */
+        padding: 10px 20px; /* Adjusted padding for larger tablets */
+    }
+}
+
+@media (max-width: 992px) {
+    .join-now-section {
+        height: auto; /* Allow height to adjust based on content */
+        padding: 20px 0; /* Vertical padding for smaller screens */
+    }
+
+    .join-now-content {
+        padding: 15px; /* Reduced padding for smaller screens */
+    }
+
+    .join-now-content h2 {
+        font-size: 2rem; /* Smaller font size for tablets */
+    }
+
+    .join-now-content p {
+        font-size: 1rem; /* Smaller description font size for tablets */
+    }
+
+    .join-now-content .btn-join {
+        font-size: 1rem; /* Smaller button font size for tablets */
+        padding: 10px 15px; /* Adjusted padding for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .join-now-content {
+        padding: 10px; /* Reduced padding for mobile screens */
+    }
+
+    .join-now-content h2 {
+        font-size: 1.75rem; /* Smaller font size for mobile screens */
+    }
+
+    .join-now-content p {
+        font-size: 0.875rem; /* Smaller description font size for mobile screens */
+    }
+
+    .join-now-content .btn-join {
+        font-size: 0.875rem; /* Smaller button font size for mobile screens */
+        padding: 8px 12px; /* Adjusted padding for mobile screens */
+    }
+}
+
+/* Modal Content Background */ /* Modal Content Background */
+/* Modal Content Background */
+.modal-content {
+    background-color: black !important; /* Set background color for the modal to black */
+    color: white; /* Ensure text is readable against black background */
+}
+
+/* Modal Header */
+.modal-header {
+    border-bottom: none; /* Remove bottom border for a cleaner look */
+}
+
+/* Close Button */
+.btn-close {
+    background-color: white; /* Set background color for the close button to white */
+    filter: invert(1); /* Invert the color to make it white */
+    opacity: 1; /* Remove default opacity */
+}
+
+/* Modal Title */
+.modal-title {
+    color: white;
+    font-size: 43px; /* Font size for the heading */
+}
+
+.modal-title span {
+    color: #aa0000; /* Promotion text color */
+}
+
+/* Promo Description Box */
+.promo-description-box {
+    background-color: #aa0000; /* Background color for the box */
+    padding: 20px;
+    border-radius: 5px;
+    color: white;
+    height: 100%; /* Ensure it takes full height */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center text alignment */
+}
+
+/* Promo Text */
+.promo-text {
+    font-size: 24px; /* Font size for the promotional text */
+    margin-bottom: 10px;
+}
+
+/* Expired Text */
+.promo-expired {
+    font-size: 14px; /* Font size for the expiration text */
+    text-align: center;
+    color: white; /* Ensure text color is white */
+    margin-top: 10px; /* Add margin-top to separate from the promo-description-box */
+}
+
+/* Description Text */
+.promo-description {
+    font-size: 14px; /* Font size for the description */
+    text-align: justify;
+    color: white; /* Ensure text color is white */
+}
+
+/* Column Styling with Outline */
+.promo-outline {
+    border: 2px solid #aa0000; /* Red outline for columns */
+    border-radius: 5px; /* Rounded corners for the outline */
+    padding: 10px; /* Padding inside the columns */
+    box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
+    display: flex;
+    align-items: center; /* Center items vertically */
+}
+
+/* Image Styling */
+.modal-body img {
+    height: 100px; /* Fixed height for the image */
+    object-fit: cover; /* Ensure image covers the box without distortion */
+    width: 100%; /* Make image responsive */
+}
+
+/* Button styling */
+#viewMoreBtn {
+    margin-top: 20px;
+    color: #ffffff; /* Button text color */
+}
+#viewMoreBtn i {
+    margin-top: 20px;
+    color: #aa0000; /* Button text color */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .modal-dialog {
+        max-width: 90%; /* Ensure modal takes most of the width on small screens */
+    }
+}
+
+/* Register Style */
+/* Registration Heading */
+.register-heading {
+    font-size: 43px;
+    color: white;
+    text-align: center;
+}
+
+/* Registration Description */
+.register-description {
+    font-size: 11px;
+    color: white;
+    text-align: center;
+}
+
+/* Form Styles */
+.register-seller .form-label {
+    width: 170px;
+    height: 40px;
+    font-size: 14px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px; /* Optional: add margin bottom for spacing */
+    text-align: center;
+    margin-top: 20px;
+}
+
+.register-seller .form-control,
+.register-seller .form-select {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #1e1e1e !important; /* Background color for the form input */
+    color: white;
+    border: 1px solid #aa0000; /* Border color for the form input */
+    border-radius: 0;
+}
+
+.register-seller .form-control::placeholder,
+.register-seller .form-select::placeholder {
+    color: #1e1e1e;
+}
+
+.register-seller button[type="submit"],
+.register-user button[type="submit"] {
+    background-color: #aa0000;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 0;
+}
+
+.register-seller button[type="submit"]:hover,
+.register-user button[type="submit"]:hover {
+    background-color: #cc0000;
+}
+
+.register-seller .identity-desc {
+    margin-top: 20px;
+    color: white;
+    border: 1px solid #aa0000; /* Border for the ul element */
+    padding: 10px; /* Optional: padding for better spacing */
+    position: relative;
+}
+
+.register-seller .identity-desc ul {
+    margin-bottom: 0;
+    padding-left: 20px; /* Optional: padding for the ul */
+}
+
+.register-seller .file-upload-wrapper {
+    bottom: 10px;
+    right: 10px;
+}
+
+@media (min-width: 768px) {
+    .register-seller .file-upload-wrapper {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+    }
+}
+
+.register-seller input[type="checkbox"],
+.register-user input[type="checkbox"] {
+    appearance: none; /* Remove default checkbox styling */
+    width: 15px;
+    height: 15px;
+    border: 2px solid #aa0000;
+    background-color: transparent;
+    position: relative;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.register-seller input[type="checkbox"]::before,
+.register-user input[type="checkbox"]::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: #aa0000;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.2s ease-in-out;
+}
+
+.register-seller input[type="checkbox"]:checked::before,
+.register-user input[type="checkbox"]:checked::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.register-seller input[type="checkbox"] + label,
+.register-user input[type="checkbox"] + label {
+    display: inline;
+    color: white;
+}
+
+/* File Upload Styles */
+.form-control-file {
+    display: none;
+}
+
+.file-upload-label {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #aa0000;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+}
+
+.file-upload-label:hover {
+    background-color: #cc0000;
+}
+
+/* Responsive adjustments */
+@media (max-width: 423px) {
+    .register-heading {
+        font-size: 35px;
+    }
+
+    .register-description {
+        font-size: 10px;
+    }
+
+    .register-seller .form-label {
+        width: 100%;
+    }
+
+    .register-seller button[type="submit"] {
+        font-size: 14px;
+    }
+
+    .file-upload-wrapper {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        left: auto;
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .register-seller input[type="checkbox"],
+    .register-user input[type="checkbox"] {
+        width: 15px; /* Slightly smaller checkbox */
+        height: 15px;
+        margin-right: 5px; /* Reduce margin for closer alignment */
+    }
+
+    .register-seller input[type="checkbox"] + label,
+    .register-user input[type="checkbox"] + label {
+        display: inline;
+        margin-top: 0;
+        vertical-align: middle; /* Align label text vertically with checkbox */
+        color: white;
+    }
+}
+
+/* Container for equal-height columns */
+.row-equal-height {
+    display: flex;
+    flex-wrap: wrap; /* Ensure columns wrap on smaller screens */
+}
+
+/* Equal height for columns */
+.col-equal-height {
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Ensure columns take equal space */
+}
+
+/* Detail Order */
+.order-info {
+    background-color: #18191c;
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribute space between items */
+}
+
+/* Ensure that the content fits within the column height */
+.order-info .title-content {
+    margin-top: -20px;
+}
+
+.order-info .title-text,
+.order-info .invoice-number {
+    height: 60px;
+    display: flex;
+    align-items: center; /* Center text vertically */
+    margin: 0; /* Remove margin to align with the top edge */
+}
+
+.order-info .title-text {
+    background-color: #515359;
+    padding: 0 10px 0 50px;
+    flex: 1; /* Ensure it takes available space */
+}
+
+.order-info .title-text h2 {
+    color: #ffffff;
+    font-size: 16px;
+    margin: 0;
+}
+
+.order-info .invoice-number {
+    color: #ffffff;
+    justify-content: flex-end; /* Align text to the right */
+}
+
+@media (min-width: 1000px) {
+    .order-info .invoice-number {
+        padding: 0 50px 0 0;
+    }
+}
+
+.order-info .invoice-number p {
+    font-size: 17px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.order-info .copy-icon {
+    cursor: pointer;
+    color: #aa0000;
+    margin-left: 10px;
+}
+
+.order-info .copy-icon:hover {
+    color: #cc0000;
+}
+
+.order-info hr {
+    border-top: 1px solid white;
+    margin: 20px 0;
+}
+
+.order-info .print-btn {
+    background-color: #aa0000;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 5px;
+    margin-top: 20px;
+    /* Center the button */
+    align-self: center;
+}
+
+.order-info .print-btn:hover {
+    background-color: #cc0000;
+}
+
+.order-info .print-icon {
+    margin-right: 5px;
+}
+
+.order-info p {
+    margin-bottom: 10px;
+}
+
+.order-info .info-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    color: #ffffff; /* Ensure text color is white */
+    align-items: center; /* Vertical center alignment */
+}
+
+.order-info .info-row .label {
+    font-weight: bold;
+}
+
+.order-info .info-row .value {
+    text-align: right;
+}
+
+/* Payment Instructions */
+.payment-instructions {
+    background-color: #131316;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.payment-instructions-header {
+    background-color: #515359;
+    margin-top: -20px !important;
+    padding: 10px;
+    width: 200px; /* Fixed width */
+    height: 60px; /* Fixed height */
+    display: flex;
+    align-items: center; /* Center text vertically */
+    justify-content: center; /* Center text horizontally */
+    text-align: center;
+    margin: 0 auto; /* Center horizontally in the parent */
+}
+
+.payment-instructions-header h3 {
+    color: #ffffff;
+    font-size: 14px;
+    margin: 0;
+}
+
+.payment-instructions ol {
+    margin: 20px 0;
+    padding-left: 20px;
+    color: #ffffff;
+}
+
+.payment-instructions .payment-image {
+    display: flex; /* Ensures that the image and text are on the same line */
+    align-items: center; /* Vertically centers the image and text */
+    gap: 20px; /* Adds space between the image and text */
+}
+
+.payment-instructions .payment-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.payment-instructions .account-name {
+    display: flex;
+    align-items: center; /* Center text vertically */
+    justify-content: center; /* Center text horizontally */
+}
+
+.payment-instructions .payment-text {
+    background-color: #515359;
+    color: #ffffff;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex; /* Flex container for centering text */
+    align-items: center; /* Center text vertically */
+    justify-content: center; /* Center text horizontally */
+}
+
+/* register user */
+.register-user .form-group {
+    border: 2px solid #aa0000;
+}
+
+.register-user .form-label {
+    background-color: #131316; /* Background color for the label */
+    color: white; /* Text color for the label */
+    padding: 12px;
+    width: 140px; /* Fixed width for the label */
+    text-align: center; /* Align text to the right within the label */
+    box-sizing: border-box;
+    margin-right: 0; /* Remove right margin to ensure no space between label and input */
+    margin-bottom: 0 !important;
+    height: 60px;
+    font-size: 10px;
+}
+
+.register-user .form-input {
+    background-color: #515359; /* Background color for the input fields */
+    color: white; /* Text color for the input fields */
+    border: 0; /* Border color */
+    padding: 10px;
+    height: 60px;
+    flex: 1; /* Allow input fields to take remaining space */
+    box-sizing: border-box;
+    margin-left: 0; /* Remove left margin to ensure no space between label and input */
+}
+
+.register-user {
+    margin: 5vb 0 5vb 0;
+}
+
+.register-user hr {
+    border-top: 3px solid #aa0000;
+    margin: 20px 0;
+}
+
+.img-register-user {
+    height: 100%;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .register-user {
+        margin: 8vb 3vb 0 3vb;
+    }
+
+    .register-user .form-label {
+        background-color: #131316; /* Background color for the label */
+        color: white; /* Text color for the label */
+        padding: 12px;
+        width: 140px; /* Fixed width for the label */
+        text-align: center; /* Align text to the right within the label */
+        box-sizing: border-box;
+        margin-right: 0; /* Remove right margin to ensure no space between label and input */
+        margin-bottom: 0 !important;
+        height: 100%;
+        font-size: 12px;
+    }
+
+    .register-user .form-input {
+        background-color: transparent; /* Background color for the input fields */
+        color: white; /* Text color for the input fields */
+        padding: 10px;
+        height: 100%;
+        flex: 1; /* Allow input fields to take remaining space */
+        box-sizing: border-box;
+        margin-left: 0; /* Remove left margin to ensure no space between label and input */
+    }
+}
+
+/* button */
+.btn-login-google {
+    border: 3px solid #aa0000 !important;
+    position: static; /* Reset positioning */
+    margin-right: 0;
+    text-align: center; /* Center text */
+    text-decoration: none;
+    color: #fff !important;
+    border-radius: 0 !important;
+}
+
+/* information */
+.information {
+    color: #ffffff;
+    text-align: justify;
+}
+
+.information h2 {
+    font-size: 36px;
+}
+
+.information a {
+    text-decoration: none;
+}
+
+/* Footer Section Styles */
+.footer {
+    background-color: #131316;
+    padding: 40px 0;
+    color: #ffffff;
+}
+
+.footer-menu {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-menu li {
+    margin-bottom: 10px;
+}
+
+.footer-menu li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer-menu li a:hover {
+    text-decoration: underline;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.contact-item i {
+    margin-right: 10px;
+    color: #aa0000;
+}
+
+.footer-disclaimer {
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: right; /* Ensure the text is right-aligned */
+}
+
+.footer-legal {
+    list-style: none;
+    padding: 0;
+    text-align: right;
+    justify-content: flex-end;
+}
+
+.footer-legal li {
+    margin-left: 15px;
+}
+
+.footer-legal li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer-legal li a:hover {
+    text-decoration: underline;
+}
