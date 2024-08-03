@@ -1194,6 +1194,18 @@ form {
     color: #aa0000; /* Promotion text color */
 }
 
+@media (max-width: 768px) {
+    .modal-title {
+        font-size: 20px;
+    }
+    .promo-description-box {
+        border-radius: 0 !important;
+    }
+    .promo-text {
+        font-size: 16px !important;
+    }
+}
+
 /* Promo Description Box */
 .promo-description-box {
     background-color: #aa0000; /* Background color for the box */
