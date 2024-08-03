@@ -12,9 +12,6 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Review</a>
-                </li>
             </ul>
             <form class="d-flex search-box mx-auto">
                 <i class="fas fa-search"></i>
@@ -46,7 +43,12 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="btn-login nav-link" href="/login">Login</a>
+                    {{-- <a class="btn-login nav-link" href="#" data-bs-toggle="modal"
+                        data-bs-target="#loginForm">Login</a> --}}
+                    <button type="button" class="btn-login nav-link" data-bs-toggle="modal"
+                        data-bs-target="#loginModal">
+                        Login
+                    </button>
                 </li>
             </ul>
         </div>

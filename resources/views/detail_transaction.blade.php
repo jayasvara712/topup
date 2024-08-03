@@ -16,50 +16,44 @@
                 <div class="row p-5">
                     <div class="col-lg-12">
                         <div class="info-row">
-                            <span class="label">Status Pesanan:</span>
+                            <span class="label">Order Status:</span>
                             <span class="value">Pending</span>
                         </div>
                     </div>
                     <div class="col-lg-12">
                         <div class="info-row">
-                            <span class="label">Status Pembayaran:</span>
+                            <span class="label">Payment Status:</span>
                             <span class="value">Unpaid</span>
                         </div>
                     </div>
                     <div class="col-lg-12">
                         <div class="info-row">
-                            <span class="label">Info Produk:</span>
+                            <span class="label">Product Name:</span>
                             <span class="value">60 Crystal</span>
                         </div>
                     </div>
                     <div class="col-lg-12">
                         <div class="info-row">
-                            <span class="label">Pesanan Dibuat:</span>
+                            <span class="label">Order Created:</span>
                             <span class="value">60 Crystal</span>
                         </div>
                     </div>
                     <div class="col-lg-12">
                         <div class="info-row">
-                            <span class="label">Pesanan Berakhir:</span>
-                            <span class="value">60 Crystal</span>
-                        </div>
-                    </div>
-                    <div class="col-lg-12">
-                        <div class="info-row">
-                            <span class="label">Pesanan Berakhir:</span>
+                            <span class="label">Order End:</span>
                             <span class="value">60 Crystal</span>
                         </div>
                     </div>
                     <hr>
                     <div class="col-lg-12">
                         <div class="info-row">
-                            <span class="label">Pembayaran Melalui:</span>
+                            <span class="label">Payment Method:</span>
                             <span class="value">60 Crystal</span>
                         </div>
                     </div>
                     <div class="col-lg-12">
                         <div class="info-row">
-                            <span class="label">Total Harga:</span>
+                            <span class="label">Total Prices:</span>
                             <span class="value">60 Crystal</span>
                         </div>
                     </div>
@@ -109,10 +103,10 @@
     <div class="container-fluid mt-5 join-now-section">
         <img src="/assets/img/bannersec2.gif" alt="Join Now Background" class="background-image">
         <div class="join-now-content container">
-            <h2>GABUNG SEKARANG</h2>
-            <p>Gabung jadi reseller untuk promosikan produk yang ada di Burpistore dan terima keuntungan tiap berhasil
-                menjual.</p>
-            <a href="/reseller" class="btn-join">DAFTAR JADI RESELLER</a>
+            <h2>JOIN NOW</h2>
+            <p>Join as a reseller to promote products available at Burpistore and receive profits for every successful sale.
+            </p>
+            <a href="/reseller" class="btn-join">REGISTER AS RESELLER</a>
         </div>
         <img src="/assets/img/imagesec2.png" alt="Floating Image" class="floating-image">
     </div>

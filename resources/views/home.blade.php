@@ -63,7 +63,7 @@
     <div class="container mt-5">
         <div class="row">
             <!-- Product Card 1 -->
-            <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+            <div class="col-4 col-sm-6 col-md-4 col-lg-3 mb-4">
                 <a href="/detail">
                     <div class="card product-card">
                         <img src="{{ asset('assets/img/product1.png') }}" class="card-img-top" alt="Product 1">
@@ -73,7 +73,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+            <div class="col-4 col-sm-6 col-md-4 col-lg-3 mb-4">
                 <a href="#">
                     <div class="card product-card">
                         <img src="{{ asset('assets/img/product1.png') }}" class="card-img-top" alt="Product 1">
@@ -83,7 +83,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+            <div class="col-4 col-sm-6 col-md-4 col-lg-3 mb-4">
                 <a href="#">
                     <div class="card product-card">
                         <img src="{{ asset('assets/img/product1.png') }}" class="card-img-top" alt="Product 1">
@@ -93,7 +93,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+            <div class="col-4 col-sm-6 col-md-4 col-lg-3 mb-4">
                 <a href="#">
                     <div class="card product-card">
                         <img src="{{ asset('assets/img/product1.png') }}" class="card-img-top" alt="Product 1">
@@ -103,7 +103,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+            <div class="col-4 col-sm-6 col-md-4 col-lg-3 mb-4">
                 <a href="#">
                     <div class="card product-card">
                         <img src="{{ asset('assets/img/product1.png') }}" class="card-img-top" alt="Product 1">
@@ -113,7 +113,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+            <div class="col-4 col-sm-6 col-md-4 col-lg-3 mb-4">
                 <a href="#">
                     <div class="card product-card">
                         <img src="{{ asset('assets/img/product1.png') }}" class="card-img-top" alt="Product 1">
@@ -123,7 +123,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+            <div class="col-4 col-sm-6 col-md-4 col-lg-3 mb-4">
                 <a href="#">
                     <div class="card product-card">
                         <img src="{{ asset('assets/img/product1.png') }}" class="card-img-top" alt="Product 1">
@@ -133,7 +133,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+            <div class="col-4 col-sm-6 col-md-4 col-lg-3 mb-4">
                 <a href="#">
                     <div class="card product-card">
                         <img src="{{ asset('assets/img/product1.png') }}" class="card-img-top" alt="Product 1">
@@ -143,7 +143,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+            <div class="col-4 col-sm-6 col-md-4 col-lg-3 mb-4">
                 <a href="#">
                     <div class="card product-card">
                         <img src="{{ asset('assets/img/product1.png') }}" class="card-img-top" alt="Product 1">
@@ -176,9 +176,8 @@
                 <div class="col-12 col-md-12 text-center">
                     <div class="about-us-body">
                         <h3>Burpigames</h3>
-                        <p>menyediakan layanan top up games dan voucher dengan harga terbaik, proses cepat dan 100%
-                            Legal
-                            dan Terpercaya!</p>
+                        <p>provides top up games and vouchers with the best prices, fast process and 100%
+                            Legal and Trusted!</p>
                         <div class="about-us-cards d-flex justify-content-center">
                             <!-- Add your cards here -->
                         </div>
@@ -220,10 +219,10 @@
     <div class="container-fluid mt-5 join-now-section">
         <img src="/assets/img/bannersec2.gif" alt="Join Now Background" class="background-image">
         <div class="join-now-content container">
-            <h2>GABUNG SEKARANG</h2>
-            <p>Gabung jadi reseller untuk promosikan produk yang ada di Burpistore dan terima keuntungan tiap berhasil
-                menjual.</p>
-            <a href="/reseller" class="btn-join">DAFTAR JADI RESELLER</a>
+            <h2>JOIN NOW</h2>
+            <p>Join as a reseller to promote products available at Burpistore and receive profits for every successful sale.
+            </p>
+            <a href="/reseller" class="btn-join">REGISTER AS RESELLER</a>
         </div>
         <img src="/assets/img/imagesec2.png" alt="Floating Image" class="floating-image">
     </div>
@@ -232,13 +231,13 @@
         document.addEventListener('DOMContentLoaded', function() {
             const products = document.querySelectorAll('.product-card');
             const viewAllBtn = document.querySelector('.view-all-btn');
-            let currentVisibleCount = 4; // Number of initially visible products
             const visibilityThreshold = 1024; // Screen width threshold
+            let currentVisibleCount = window.innerWidth <= visibilityThreshold ? 6 : 4;
 
             // Function to update visibility of products and the button
             function updateProductVisibility() {
                 const screenWidth = window.innerWidth;
-                const visibleCount = screenWidth >= visibilityThreshold ? 4 : 3;
+                const visibleCount = screenWidth >= visibilityThreshold ? 4 : 6;
                 products.forEach((product, index) => {
                     if (index < currentVisibleCount) {
                         product.style.display = 'block'; // Show product
@@ -261,7 +260,7 @@
             // Event listener for the "View All" button
             viewAllBtn.addEventListener('click', function() {
                 const screenWidth = window.innerWidth;
-                const increaseCount = screenWidth >= visibilityThreshold ? 4 : 3;
+                const increaseCount = screenWidth >= visibilityThreshold ? 4 : 6;
                 currentVisibleCount +=
                     increaseCount; // Increase the visible count by 4 or 3 based on screen size
                 updateProductVisibility();
@@ -269,7 +268,7 @@
 
             // Update product visibility on window resize
             window.addEventListener('resize', function() {
-                currentVisibleCount = window.innerWidth >= visibilityThreshold ? 4 : 3;
+                currentVisibleCount = window.innerWidth >= visibilityThreshold ? 4 : 6;
                 updateProductVisibility();
             });
         });

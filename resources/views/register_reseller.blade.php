@@ -4,42 +4,43 @@
         <div class="row">
             <form action="#" method="post" class="register-seller">
                 <div class="col-lg-12 mt-5 pt-5 mb-5 text-center">
-                    <h1 class="register-heading">Pendaftaran Reseller Burpigames</h1>
+                    <h1 class="register-heading">Burpigames Reseller Registration</h1>
                     <p class="register-description">
-                        Pendaftaran akan diproses maksimal 5 hari kerja setelah formulir dikirim.
-                        Setelah selesai diproses, kamu akan menerima email konfirmasi dari tim Reseller Burpigames.
+                        Registration will be processed within a maximum of 5 working days after the form is submitted.
+                        Once processed, you will receive a confirmation email from the Burpigames Reseller team.
                     </p>
                 </div>
                 <div class="col-lg-12 mt-2">
                     <div class="row">
                         <div class="col-lg-6">
-                            <label class="form-label">Nama Lengkap</label>
+                            <label class="form-label">Full Name</label>
                             <input type="text" name="" class="form-control">
                         </div>
                         <div class="col-lg-6">
-                            <label class="form-label">Jenis Kelamin</label>
+                            <label class="form-label">Gender</label>
                             <select name="" class="form-select">
-                                <option>1</option>
+                                <option>Man</option>
+                                <option>Woman</option>
                             </select>
                         </div>
                         <div class="col-lg-6">
-                            <label class="form-label">Alamat Email</label>
+                            <label class="form-label">Email Address</label>
                             <input type="email" name="" class="form-control">
                         </div>
                         <div class="col-lg-6">
-                            <label class="form-label">No Handphone</label>
+                            <label class="form-label">Phone Number</label>
                             <input type="text" name="" class="form-control">
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-12">
-                    <label class="form-label">Alamat</label>
+                    <label class="form-label">Address</label>
                     <textarea name="" class="form-control"></textarea>
                 </div>
                 <div class="col-lg-12">
                     <div class="row">
                         <div class="col-lg-6">
-                            <label class="form-label">Negara</label>
+                            <label class="form-label">Region</label>
                             <select name="" class="form-select">
                                 <option>1</option>
                             </select>
@@ -68,10 +69,10 @@
                 </div> --}}
                 <div class="col-lg-12 mt-3 mb-3">
                     <input type="checkbox" name="requires">
-                    <label for="">Saya setuju dengan syarat dan ketentuan</label>
+                    <label for="">I agree to the terms and conditions</label>
                 </div>
                 <div class="col-lg-12 text-center">
-                    <button type="submit" class="btn btn-primary">Konfirmasi</button>
+                    <button type="submit" class="btn btn-primary">Register</button>
                 </div>
             </form>
         </div>

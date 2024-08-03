@@ -179,26 +179,66 @@
         </div>
     </div>
 
+    {{-- modal login --}}
+    <div class="modal fade " id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-transparent">
+                {{-- <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div> --}}
+                <div class="modal-body">
+                    <div class="container d-flex justify-content-center align-items-center">
+                        <div class="card login-card p-4">
+                            <div class="card-body text-center">
+                                <img src="path/to/your/logo.png" alt="Logo" class="logo mb-4">
+                                <form>
+                                    <div class="mb-3">
+                                        <input type="email" class="form-control" id="email"
+                                            placeholder="Enter your email" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="password" class="form-control" id="password"
+                                            placeholder="Enter your password" required>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6 mb-2">
+                                            <button type="submit" class="btn btn-custom">Login</button>
+                                        </div>
+                                        <div class="col-lg-6 mb-2">
+                                            <a href="/reseller" class="btn btn-custom">
+                                                Register
+                                            </a>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Footer Section -->
     <footer class="footer mt-5">
         <div class="container">
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-4 col-lg-3">
                     <ul class="footer-menu">
                         <li><a href="#">Home</a></li>
-                        <li><a href="#">Review</a></li>
                         <li><a href="#">Code Promo</a></li>
                         <li><a href="#">Gift Card</a></li>
                     </ul>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-4 col-lg-3">
                     <ul class="footer-menu">
-                        <li><a href="#">Daftar Reseller</a></li>
+                        <li><a href="#">Reseller Register</a></li>
                         <li><a href="#">Top Seller</a></li>
-                        <li><a href="#">Pusat Bantuan</a></li>
+                        <li><a href="#">Help Center</a></li>
                     </ul>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-4 col-lg-3">
                     <div class="contact-info">
                         <div class="contact-item">
                             <i class="fas fa-phone"></i> +123 456 7890
@@ -208,15 +248,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 text-end">
-                    <p class="footer-disclaimer">Nama terdaftar dan merek dagang adalah hak cipta
-                        dan properti pemiliknya masing-masing.
+                <div class="col-md-12 col-lg-3 text-end">
+                    <p class="footer-disclaimer">Registered names and trademarks are copyright and property of their
+                        respective owners.
 
                     </p>
                     <p class="footer-disclaimer">© 2024 burpi.com</p>
-                    <ul class="footer-legal">
-                        <li><a href="#">Kebijakan Privasi</a></li>
-                        <li><a href="#">Syarat Penggunaan</a></li>
+                    <ul class="footer-menu">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Use</a></li>
                         <li><a href="#">Legal</a></li>
                     </ul>
                 </div>

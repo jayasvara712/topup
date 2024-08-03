@@ -139,7 +139,7 @@
                     <div class="col-md-12">
                         <form action="#">
                             <div class="form-group invoice">
-                                <label for="text" class="form-label">Detail Pesanan / Invoice</label>
+                                <label for="text" class="form-label">Order Detail / Invoice</label>
                                 <input type="text" id="text" class="form-input" required>
                             </div>
                         </form>
@@ -150,12 +150,11 @@
                         <div class="customer-service-card">
                             <i class="fas fa-clock customer-service-icon"></i>
                             <h2 class="customer-service-heading">Customer Service 24/7</h2>
-                            <p class="customer-service-description">Setiap kali Anda mengalami masalah, Anda dapat
-                                menghubungi
-                                layanan pelanggan kami. Tim Burpi akan menganalisis masalah tersebut dan menghubungi Anda
-                                sesegera mungkin.</p>
+                            <p class="customer-service-description">Whenever you have any problem, you can contact our
+                                customer service. Burpi team will analyze the problem and get back to you
+                                as soon as possible.</p>
                             <button class="customer-service-button">
-                                <i class="fas fa-comments customer-service-button-icon"></i> Layanan Chat 24/7
+                                <i class="fas fa-comments customer-service-button-icon"></i> Customer Service 24/7
                             </button>
                         </div>
                     </div>
@@ -165,8 +164,8 @@
             <div class="col-sm-12 col-md-12 col-lg-5 mt-2">
                 <div class="account-details">
                     <form action="/detail_transaction" method="get">
-                        <div class="detail-akun-box">
-                            Detail Akun
+                        <div class="account-details-box">
+                            Account Detail
                         </div>
                         <div class="form-group">
                             <label for="user-id" class="form-label">ID User</label>
@@ -174,14 +173,14 @@
                         </div>
                         <div class="form-group">
                             <select id="server" class="form-input" required>
-                                <option value="">Pilih Server</option>
+                                <option value="">Select Server</option>
                                 <option value="server1">Server 1</option>
                                 <option value="server2">Server 2</option>
                                 <!-- Add more options as needed -->
                             </select>
                         </div>
-                        <div class="detail-akun-box mt-1">
-                            Data Pemesanan
+                        <div class="account-details-box mt-1">
+                            Order Data
                         </div>
                         <div class="form-group">
                             <label for="email" class="form-label">Email</label>
@@ -192,12 +191,12 @@
                             <input type="tel" id="whatsapp" class="form-input" required>
                         </div>
 
-                        <div class="detail-akun-box mt-1">
+                        <div class="account-details-box mt-1">
                             Promo Code
                         </div>
                         <div class="form-group">
                             <select id="promocode" class="form-input" required>
-                                <option value="">Pilih Promo Code</option>
+                                <option value="">Select Promo Code</option>
                                 <option value="promo1">Promo 1</option>
                                 <option value="promo2">Promo 2</option>
                                 <!-- Add more options as needed -->
@@ -205,31 +204,31 @@
                         </div>
 
                         {{-- Payment Method --}}
-                        <div class="detail-akun-box mt-1">
-                            Metode Pembayaran
+                        <div class="account-details-box mt-1">
+                            Payment Method
                         </div>
                         <!-- Payment Boxes -->
                         <div class="payment-box" id="payment-box-1">
-                            Klik untuk memilih metode pembayaran 1
+                            Payment Method 1
                         </div>
                         <div class="payment-box" id="payment-box-2">
-                            Klik untuk memilih metode pembayaran 2
+                            Payment Method 2
                         </div>
                         <div class="payment-box" id="payment-box-3">
-                            Klik untuk memilih metode pembayaran 3
+                            Payment Method 3
                         </div>
 
                         <!-- Total Price Section -->
                         <div class="total-price-section">
-                            <div class="total-price-text">Total Harga</div>
+                            <div class="total-price-text">Total Price</div>
                             <div class="price" id="total-price">Rp. 100.000</div>
-                            <div class="small-text"><b>Pastikan data game Anda sudah benar. Kesalahan input data game bukan
-                                    tanggung jawab kami.</b></div>
-                            <div class="small-text">Harga termasuk pajak dan biaya administrasi</div>
+                            <div class="small-text"><b>Make sure your game data is correct. Game data input errors are not
+                                    our responsibility.</b></div>
+                            <div class="small-text">Price includes tax and administration fee</div>
                         </div>
 
                         <div class="form-group">
-                            <input type="submit" value="Bayar Sekarang" class="form-button">
+                            <input type="submit" value="Pay Now" class="form-button">
                         </div>
                     </form>
                 </div>
