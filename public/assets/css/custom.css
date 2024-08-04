@@ -1054,7 +1054,7 @@ form {
         right: -70px; /* Adjust based on your design */
         width: 664px; /* Adjust size as needed */
         height: 1304px; /* Maintain aspect ratio */
-        z-index: 10; /* Ensure the floating image is above the background */
+        z-index: 0; /* Ensure the floating image is above the background */
     }
 }
 
@@ -1800,7 +1800,7 @@ form {
     text-align: right; /* Ensure the text is right-aligned */
 }
 
-@media (max-width: 430px) {
+@media (max-width: 767px) {
     .footer-disclaimer,
     .footer-legal,
     .footer-menu {
