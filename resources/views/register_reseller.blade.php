@@ -14,7 +14,8 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <label class="form-label">Full Name</label>
-                            <input type="text" name="" class="form-control">
+                            <input type="text" name="" class="form-control"
+                                placeholder="name according to identity card">
                         </div>
                         <div class="col-lg-6">
                             <label class="form-label">Gender</label>
@@ -25,17 +26,18 @@
                         </div>
                         <div class="col-lg-6">
                             <label class="form-label">Email Address</label>
-                            <input type="email" name="" class="form-control">
+                            <input type="email" name="" class="form-control" placeholder="Fill with active email">
                         </div>
                         <div class="col-lg-6">
                             <label class="form-label">Phone Number</label>
-                            <input type="text" name="" class="form-control">
+                            <input type="text" name="" class="form-control"
+                                placeholder="Fill with active phone number">
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-12">
                     <label class="form-label">Address</label>
-                    <textarea name="" class="form-control"></textarea>
+                    <textarea name="" class="form-control" placeholder="Fill address according to identity card"></textarea>
                 </div>
                 <div class="col-lg-12">
                     <div class="row">
@@ -47,7 +49,7 @@
                         </div>
                         <div class="col-lg-6">
                             <label class="form-label">Password</label>
-                            <input type="password" name="" class="form-control">
+                            <input type="password" name="" class="form-control" placeholder="Fill the password">
                         </div>
                     </div>
                 </div>
@@ -69,7 +71,8 @@
                 </div> --}}
                 <div class="col-lg-12 mt-3 mb-3">
                     <input type="checkbox" name="requires">
-                    <label for="">I agree to the terms and conditions</label>
+                    <label for="">I agree to the Terms & Conditions and Privacy Policy applicable at
+                        Burpigames</label>
                 </div>
                 <div class="col-lg-12 text-center">
                     <button type="submit" class="btn btn-primary">Register</button>

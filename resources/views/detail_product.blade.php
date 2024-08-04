@@ -109,7 +109,12 @@
                         <div class="price-list">
                             <div class="price-list-item">
                                 <span class="price-list-text">60 Crystal</span>
-                                <span class="price-list-price" data-price="10000">Rp.10.000</span>
+                                <span class="price-list-price" data-price="10000">
+                                    Rp.10.000
+                                    <br>
+                                    <div class="price-lsit-disc-text">Normal Price : <span
+                                            class="price-list-disc">Rp.20.000</span></div>
+                                </span>
                                 <button class="cart-button">
                                     <i class="fas fa-shopping-cart cart-icon"></i>
                                 </button>

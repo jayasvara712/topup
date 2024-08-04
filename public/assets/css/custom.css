@@ -116,7 +116,7 @@ body {
     }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 990px) {
     .btn-login {
         display: flex !important;
         align-items: center; /* Center vertically */
@@ -135,7 +135,7 @@ body {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 980px) {
     .navbar-nav {
         flex-direction: column; /* Stack nav items vertically on smaller screens */
         margin-right: 0; /* Remove margin for vertical layout */
@@ -300,52 +300,39 @@ body {
     border: 5px solid #666666; /* Outline color and thickness */
     transition: border-color 0.3s ease; /* Smooth transition for border color */
     position: relative; /* Ensure child elements are positioned relative to this card */
+    background-color: #aa0000 !important;
 }
 
-.product-card:hover {
-    border: 5px solid #aa0000;
+.product-card .card-image {
+    overflow: hidden; /* Ensures the image doesn't overflow the container */
+    width: 100%; /* Set a width for the container */
+    height: auto; /* Set a height for the container */
 }
 
 .product-card img {
     width: 100%; /* Full width */
     height: auto; /* Auto height to maintain aspect ratio */
     object-fit: cover; /* Ensure the image covers the card */
+    transition: transform 0.5s ease;
 }
 
-.product-card .card-body {
-    position: absolute;
-    bottom: 0; /* Position at the bottom of the card */
-    left: 50%;
-    transform: translateX(-50%); /* Center the button horizontally */
-    padding: 0; /* Remove padding */
+.product-card img:hover {
+    transform: scale(1.2); /* Zoom in the image */
+}
+
+.product-card .card-text {
+    color: #ffffff;
+    text-decoration: none;
     text-align: center;
-    width: 100%; /* Ensure the button spans the full width */
-    display: none; /* Initially hide the button */
+    font-size: 18px;
 }
 
-.product-card:hover .card-body {
-    display: flex; /* Display the button on hover */
-    justify-content: center; /* Center the button */
-}
-
-.product-card .btn-primary {
-    width: 100px; /* Fixed width for the button */
-    background-color: #aa0000; /* Button color */
-    border-color: #aa0000; /* Border color */
-    border-radius: 0; /* Remove border radius */
-    margin-bottom: 0; /* Ensure no margin at the bottom */
-}
-
-.product-card .btn-primary:hover {
-    background-color: #900000; /* Slightly darker color on hover */
-    border-color: #900000; /* Border color on hover */
-}
-
-/* Responsive adjustments */
 @media (max-width: 768px) {
-    .product-card {
-        width: 100%; /* Full width on smaller screens */
-        max-width: 100%; /* Ensure it doesn't exceed parent width */
+    .product-card .card-body {
+        padding: 5px;
+    }
+    .product-card .card-text {
+        font-size: 14px;
     }
 }
 
@@ -591,12 +578,31 @@ body {
 .price-list-text,
 .price-list-price {
     color: white;
+    align-content: center;
     flex: 1; /* Allow these elements to take up remaining space */
 }
 
 .price-list-price {
     font-weight: bold;
-    text-align: center; /* Center align price text */
+    text-align: right; /* Center align price text */
+}
+
+.price-lsit-disc-text {
+    font-weight: 100;
+    text-align: right;
+    color: #fff;
+    font-size: 10px;
+}
+
+.price-list-disc {
+    font-weight: 100;
+    text-align: right;
+    color: #fff;
+    text-decoration: line-through;
+    text-decoration-color: #aa0000;
+    text-decoration-line: line-through;
+    flex: 1;
+    font-size: 10px;
 }
 
 /* Total Price */
@@ -841,7 +847,7 @@ form {
     .cart-button,
     .xmark-button {
         width: 64px;
-        height: 64px;
+        height: auto;
         margin: -20px -20px -20px 10px; /* Adjust margin for mobile view */
     }
 }
@@ -849,7 +855,7 @@ form {
     .cart-button,
     .xmark-button {
         width: 64px;
-        height: 64px;
+        height: auto;
         margin: -20px -20px -20px 10px; /* Adjust margin for mobile view */
     }
 }
@@ -1303,6 +1309,9 @@ form {
     margin-bottom: 10px; /* Optional: add margin bottom for spacing */
     text-align: center;
     margin-top: 20px;
+}
+.register-seller .form-control::placeholder {
+    color: #504f4f !important;
 }
 
 .register-seller .form-control,
@@ -1791,20 +1800,33 @@ form {
     text-align: right; /* Ensure the text is right-aligned */
 }
 
-@media (max-width: 425px) {
+@media (max-width: 430px) {
     .footer-disclaimer,
     .footer-legal,
     .footer-menu {
         text-align: left;
     }
+
+    .footer-disclaimer {
+        margin-top: 40px;
+        margin-bottom: 0;
+    }
 }
 
-.login-card {
+.login-card,
+.login-card-header {
     width: 100%;
     max-width: 400px;
     background-color: #1e1e1e !important;
-    border-radius: 10px;
+    border-radius: 0 !important;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.login-card-header {
+    font-size: 14px;
+    text-align: center;
+    background-color: #aa0000 !important;
+    color: #ffffff;
 }
 
 .login-card .logo {
@@ -1837,4 +1859,48 @@ form {
 .login-card .btn-custom:hover {
     background-color: #cc0000;
     color: #ffffff;
+}
+
+.live-chat-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #aa0000;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 15px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 1000;
+}
+.chat-window {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 300px;
+    background-color: #515359;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: none;
+    z-index: 1000;
+}
+.chat-header {
+    background-color: #aa0000;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+.chat-body {
+    padding: 10px;
+}
+.chat-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+.btn-chat {
+    background-color: #aa0000 !important;
+    color: #ffffff !important;
 }

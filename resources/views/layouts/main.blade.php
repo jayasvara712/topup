@@ -188,7 +188,12 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div> --}}
                 <div class="modal-body">
-                    <div class="container d-flex justify-content-center align-items-center">
+                    <div class="container justify-content-center align-items-center">
+                        <div class="card login-card-header p-4">
+                            <span>Daftarkan dirimu sekarang juga, di Burpigames kamu
+                                akan mendapatkanbanyak promo dan
+                                kalian bisa melihat riwayat pembelian kalian.</span>
+                        </div>
                         <div class="card login-card p-4">
                             <div class="card-body text-center">
                                 <img src="path/to/your/logo.png" alt="Logo" class="logo mb-4">
@@ -228,7 +233,6 @@
                     <ul class="footer-menu">
                         <li><a href="#">Home</a></li>
                         <li><a href="#">Code Promo</a></li>
-                        <li><a href="#">Gift Card</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4 col-lg-3">
@@ -249,11 +253,12 @@
                     </div>
                 </div>
                 <div class="col-md-12 col-lg-3 text-end">
-                    <p class="footer-disclaimer">Registered names and trademarks are copyright and property of their
-                        respective owners.
-
-                    </p>
-                    <p class="footer-disclaimer">© 2024 burpi.com</p>
+                    <div class="footer-disclaimer">
+                        <p>Registered names and trademarks are copyright and property of
+                            their respective owners.
+                        </p>
+                        <p>© 2024 burpi.com</p>
+                    </div>
                     <ul class="footer-menu">
                         <li><a href="#">Privacy Policy</a></li>
                         <li><a href="#">Terms of Use</a></li>
@@ -263,6 +268,27 @@
             </div>
         </div>
     </footer>
+
+    <!-- Live Chat Button -->
+    <button class="live-chat-btn"><i class="fa-solid fa-comments"></i> Live Chat</button>
+
+    <!-- Chat Window -->
+    <div class="chat-window">
+        <div class="chat-header">Live Chat</div>
+        <div class="chat-body">
+            <div class="chat-form">
+                <input type="text" class="chat-input" id="userName" placeholder="Enter your name">
+                <button class="btn btn-chat" onclick="startChat()">Start Chat</button>
+            </div>
+            <div class="chat-conversation" style="display: none;">
+                <div class="chat-messages">
+                    <p>Hello! How can we help you today?</p>
+                </div>
+                <input type="text" class="chat-input" placeholder="Type your message...">
+                <button class="btn btn-chat">Send</button>
+            </div>
+        </div>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
@@ -343,6 +369,26 @@
                 viewMoreBtn.style.display = 'none';
             }
         });
+
+        // live chat
+        document.querySelector('.live-chat-btn').addEventListener('click', function() {
+            var chatWindow = document.querySelector('.chat-window');
+            if (chatWindow.style.display === 'none' || chatWindow.style.display === '') {
+                chatWindow.style.display = 'block';
+            } else {
+                chatWindow.style.display = 'none';
+            }
+        });
+
+        function startChat() {
+            var userName = document.getElementById('userName').value;
+            if (userName.trim() !== '') {
+                document.querySelector('.chat-form').style.display = 'none';
+                document.querySelector('.chat-conversation').style.display = 'block';
+            } else {
+                alert('Please enter your name.');
+            }
+        }
     </script>
 </body>
 

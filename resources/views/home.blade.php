@@ -66,89 +66,83 @@
             <div class="col-4 col-sm-6 col-md-4 col-lg-3 mb-4">
                 <a href="/detail">
                     <div class="card product-card">
-                        <img src="{{ asset('assets/img/product1.png') }}" class="card-img-top" alt="Product 1">
-                        <div class="card-body text-center">
-                            <div class="btn btn-primary btn-block">View Item</div>
+                        <div class="card-image">
+                            <img src="{{ asset('assets/img/product1.png') }}"" class="card-img-top" alt="...">
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Tarisland</p>
                         </div>
                     </div>
                 </a>
             </div>
             <div class="col-4 col-sm-6 col-md-4 col-lg-3 mb-4">
-                <a href="#">
+                <a href="/detail">
                     <div class="card product-card">
-                        <img src="{{ asset('assets/img/product1.png') }}" class="card-img-top" alt="Product 1">
-                        <div class="card-body text-center">
-                            <div class="btn btn-primary btn-block">View Item</div>
+                        <div class="card-image">
+                            <img src="{{ asset('assets/img/product1.png') }}"" class="card-img-top" alt="...">
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Tarisland</p>
                         </div>
                     </div>
                 </a>
             </div>
             <div class="col-4 col-sm-6 col-md-4 col-lg-3 mb-4">
-                <a href="#">
+                <a href="/detail">
                     <div class="card product-card">
-                        <img src="{{ asset('assets/img/product1.png') }}" class="card-img-top" alt="Product 1">
-                        <div class="card-body text-center">
-                            <div class="btn btn-primary btn-block">View Item</div>
+                        <div class="card-image">
+                            <img src="{{ asset('assets/img/product1.png') }}"" class="card-img-top" alt="...">
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Tarisland</p>
                         </div>
                     </div>
                 </a>
             </div>
             <div class="col-4 col-sm-6 col-md-4 col-lg-3 mb-4">
-                <a href="#">
+                <a href="/detail">
                     <div class="card product-card">
-                        <img src="{{ asset('assets/img/product1.png') }}" class="card-img-top" alt="Product 1">
-                        <div class="card-body text-center">
-                            <div class="btn btn-primary btn-block">View Item</div>
+                        <div class="card-image">
+                            <img src="{{ asset('assets/img/product1.png') }}"" class="card-img-top" alt="...">
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Tarisland</p>
                         </div>
                     </div>
                 </a>
             </div>
             <div class="col-4 col-sm-6 col-md-4 col-lg-3 mb-4">
-                <a href="#">
+                <a href="/detail">
                     <div class="card product-card">
-                        <img src="{{ asset('assets/img/product1.png') }}" class="card-img-top" alt="Product 1">
-                        <div class="card-body text-center">
-                            <div class="btn btn-primary btn-block">View Item</div>
+                        <div class="card-image">
+                            <img src="{{ asset('assets/img/product1.png') }}"" class="card-img-top" alt="...">
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Tarisland</p>
                         </div>
                     </div>
                 </a>
             </div>
             <div class="col-4 col-sm-6 col-md-4 col-lg-3 mb-4">
-                <a href="#">
+                <a href="/detail">
                     <div class="card product-card">
-                        <img src="{{ asset('assets/img/product1.png') }}" class="card-img-top" alt="Product 1">
-                        <div class="card-body text-center">
-                            <div class="btn btn-primary btn-block">View Item</div>
+                        <div class="card-image">
+                            <img src="{{ asset('assets/img/product1.png') }}"" class="card-img-top" alt="...">
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Tarisland</p>
                         </div>
                     </div>
                 </a>
             </div>
             <div class="col-4 col-sm-6 col-md-4 col-lg-3 mb-4">
-                <a href="#">
+                <a href="/detail">
                     <div class="card product-card">
-                        <img src="{{ asset('assets/img/product1.png') }}" class="card-img-top" alt="Product 1">
-                        <div class="card-body text-center">
-                            <div class="btn btn-primary btn-block">View Item</div>
+                        <div class="card-image">
+                            <img src="{{ asset('assets/img/product1.png') }}"" class="card-img-top" alt="...">
                         </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-4 col-sm-6 col-md-4 col-lg-3 mb-4">
-                <a href="#">
-                    <div class="card product-card">
-                        <img src="{{ asset('assets/img/product1.png') }}" class="card-img-top" alt="Product 1">
-                        <div class="card-body text-center">
-                            <div class="btn btn-primary btn-block">View Item</div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-4 col-sm-6 col-md-4 col-lg-3 mb-4">
-                <a href="#">
-                    <div class="card product-card">
-                        <img src="{{ asset('assets/img/product1.png') }}" class="card-img-top" alt="Product 1">
-                        <div class="card-body text-center">
-                            <div class="btn btn-primary btn-block">View Item</div>
+                        <div class="card-body">
+                            <p class="card-text">Tarisland</p>
                         </div>
                     </div>
                 </a>
