@@ -1,56 +1,109 @@
-<nav class="navbar navbar-expand-lg navbar-custom fixed-top">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="/">
-            <img src="{{ asset('assets/img/crystal.png') }}" alt="Logo">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item active">
-                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+<!--==================== HEADER ====================-->
+<header class="header" id="header">
+    <nav class="nav container">
+        <a href="/" class="nav__logo">Logo</a>
+
+        <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a href="#" class="nav__link">Home</a>
                 </li>
-            </ul>
-            <form class="d-flex search-box mx-auto">
-                <i class="fas fa-search"></i>
-                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-            </form>
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#promoCodeModal">
-                        <i class="fas fa-percent promo-icon"></i>Promo Code
+
+                <li class="nav__item">
+                    <a class="nav__link" href="#" data-bs-toggle="modal" data-bs-target="#promoCodeModal">
+                        <i class="fas fa-percent nav__icon"></i>Promo Code
                     </a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="currencyDropdown" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fas fa-dollar-sign currency-icon" id="currencyIcon"></i><span
-                            id="currencyText">Currency</span>
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="currencyDropdown">
-                        <li>
-                            <a class="dropdown-item" href="#" data-currency="SGD">
-                                <i class="fas fa-dollar-sign me-2"></i>SGD
-                            </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#" data-currency="IDR">
-                                <i class="fas fa-coins me-2"></i>IDR
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    {{-- <a class="btn-login nav-link" href="#" data-bs-toggle="modal"
-                        data-bs-target="#loginForm">Login</a> --}}
-                    <button type="button" class="btn-login nav-link" data-bs-toggle="modal"
-                        data-bs-target="#loginModal">
-                        Login
-                    </button>
-                </li>
             </ul>
+
+            <!-- Close button -->
+            <div class="nav__close" id="nav-close">
+                <i class="ri-close-line"></i>
+            </div>
+        </div>
+
+        <div class="nav__actions">
+            <!-- Search button -->
+            <i class="ri-search-line nav__icon" id="search-btn"></i>
+
+            <!-- Currency button -->
+            <li class="dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="currencyDropdown" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fas fa-dollar-sign nav__icon" id="currencyIcon"></i>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="currencyDropdown">
+                    <li>
+                        <a class="dropdown-item" href="#" data-currency="SGD"> <i
+                                class="fas fa-dollar-sign me-2"></i>SGD </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#" data-currency="IDR"> <i
+                                class="fas fa-coins me-2"></i>IDR </a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- Login button -->
+            <i class="ri-user-line nav__icon" id="login-btn"></i>
+
+            <!-- Toggle button -->
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-menu-line"></i>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!--==================== SEARCH ====================-->
+<div class="search" id="search">
+    <form action="" class="search__form">
+        <i class="ri-search-line search__icon"></i>
+        <input type="search" placeholder="What are you looking for?" class="search__input" />
+    </form>
+
+    <i class="ri-close-line search__close" id="search-close"></i>
+</div>
+
+<!--==================== LOGIN ====================-->
+<div class="login" id="login">
+    <div class="">
+        <div class="login__form title">
+            <span class="login__title">
+                Register yourself now, at Burpigames you will get lots of promos and you can see your purchase history.
+            </span>
         </div>
     </div>
-</nav>
+    <form action="" class="login__form">
+
+        <img src="path/to/your/logo.png" alt="Logo" class="logo mb-4">
+
+        <div class="login__group">
+            <div>
+                <input type="email" placeholder="Write your email" id="email" class="login__input" />
+            </div>
+
+            <div>
+                <input type="password" placeholder="Enter your password" id="password" class="login__input" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6 mb-2">
+                <button type="submit" class="btn login__button">Log In</button>
+            </div>
+            <div class="col-6 mb-2">
+                <a href="#" class="btn login__button"> Register </a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 text-white text-center">
+                By entering Burpigames, you agree to the Terms and Conditions and Privacy Policy.
+            </div>
+        </div>
+
+    </form>
+
+    <i class="ri-close-line login__close" id="login-close"></i>
+</div>
