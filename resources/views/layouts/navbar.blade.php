@@ -44,6 +44,11 @@
                 </ul>
             </li>
 
+            <!-- Cart Button -->
+            <a href="/cart">
+                <i class="ri-shopping-cart-2-line nav__icon"></i>
+            </a>
+
             <!-- Login button -->
             <i class="ri-user-line nav__icon" id="login-btn"></i>
 

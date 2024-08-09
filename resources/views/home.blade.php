@@ -51,8 +51,8 @@
                     <a href="#" class="btn btn-dark category-btn active">Top Seller</a>
                     <a href="#" class="btn btn-dark category-btn">via Login</a>
                     <a href="#" class="btn btn-dark category-btn">via UID</a>
-                    <a href="#" class="btn btn-dark category-btn">Razer Payment</a>
                     <a href="#" class="btn btn-dark category-btn">Gift Card</a>
+                    <a href="#" class="btn btn-dark category-btn">Razer Payment</a>
                     <!-- Add more buttons as needed -->
                 </div>
             </div>

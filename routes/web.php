@@ -35,3 +35,9 @@ Route::get('/login', function () {
 Route::get('/terms_condition', function () {
     return view('terms_condition');
 });
+Route::get('/cart', function () {
+    return view('cart');
+});
+Route::get('/razer', function () {
+    return view('razer');
+});

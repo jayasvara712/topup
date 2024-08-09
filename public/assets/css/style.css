@@ -18,6 +18,7 @@
     --container-color: hsl(230, 100%, 97%);
     --border-color: hsl(230, 25%, 80%);
     --navbar-color: #131316;
+    --color-black: #000;
 
     --bg-red: #aa0000;
 
@@ -540,4 +541,66 @@ a {
 .category-btn.active {
     background-color: #aa0000 !important; /* Active background color */
     color: #ffffff; /* Text color for active category */
+}
+
+/* Shopping Cart */
+.table-cart {
+    border: 5px solid;
+    border-radius: 10px;
+    border-color: var(--bg-red);
+}
+
+.table-cart table {
+    color: var(--text-color);
+    vertical-align: middle;
+}
+
+.table-cart thead {
+    background-color: var(--navbar-color);
+}
+
+.table-cart table tbody {
+    background-color: var(--color-black);
+    color: var(--text-color);
+    padding: 10px;
+}
+
+.table-cart a {
+    color: var(--text-color) !important;
+}
+
+.table-cart .total-price th,
+.table-cart .total-price td {
+    text-align: right;
+    align-content: center;
+    border-bottom: 0 !important;
+}
+
+.table-cart .currency {
+    color: var(--bg-red);
+}
+
+.table-cart .btn-buy,
+.razer-pay .btn-submit {
+    border: 5px solid;
+    border-color: var(--bg-red);
+    border-radius: 10px;
+    background-color: transparent;
+    color: var(--text-color);
+    padding: 5px 10px 5px 10px;
+}
+
+.table-cart .btn-buy:hover,
+.razer-pay .btn-submit:hover {
+    background-color: var(--color-black);
+}
+
+.razer-pay {
+    border: 5px solid;
+    border-radius: 10px;
+    border-color: var(--bg-red);
+}
+
+.razer-pay .form-control {
+    background-color: transparent;
 }
