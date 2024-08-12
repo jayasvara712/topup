@@ -102,13 +102,13 @@
     {{-- Price List Section --}}
     <div class="container">
         <div class="row">
+            <!-- Price List Section -->
             <div class="col-sm-12 col-md-12 col-lg-7 mt-2">
                 <div class="row">
-                    <!-- Price List Section -->
                     <div class="col-md-6">
                         <div class="price-list">
                             <div class="price-list-item">
-                                <span class="price-list-text">60 Crystal</span>
+                                <span class="price-list-text" data-name="60 Crystal">60 Crystal</span>
                                 <span class="price-list-price" data-price="10000">
                                     Rp.10.000
                                     <br>
@@ -127,7 +127,7 @@
                     <div class="col-md-6">
                         <div class="price-list">
                             <div class="price-list-item">
-                                <span class="price-list-text">120 Crystal</span>
+                                <span class="price-list-text" data-name="120 Crystal">120 Crystal</span>
                                 <span class="price-list-price" data-price="20000">Rp.20.000</span>
                                 <button class="cart-button">
                                     <i class="fas fa-shopping-cart cart-icon"></i>
@@ -166,15 +166,16 @@
 
                 </div>
             </div>
+            {{-- account detail --}}
             <div class="col-sm-12 col-md-12 col-lg-5 mt-2">
                 <div class="account-details">
-                    <form action="/detail_transaction" method="get">
+                    <form id="paymentForm">
                         <div class="account-details-box">
                             Account Detail
                         </div>
                         <div class="form-group">
                             <label for="user-id" class="form-label">ID User</label>
-                            <input type="text" id="user-id" class="form-input" required>
+                            <input type="text" id="user_id" name="user_id" class="form-input" required>
                         </div>
                         <div class="form-group">
                             <select id="server" class="form-input" required>
@@ -189,18 +190,18 @@
                         </div>
                         <div class="form-group">
                             <label for="email" class="form-label">Email</label>
-                            <input type="email" id="email" class="form-input" required>
+                            <input type="email" id="email" name="email" class="form-input" required>
                         </div>
                         <div class="form-group">
                             <label for="whatsapp" class="form-label">Whatsapp</label>
-                            <input type="tel" id="whatsapp" class="form-input" required>
+                            <input type="tel" id="whatsapp" name="whatsapp" class="form-input" required>
                         </div>
 
                         <div class="account-details-box mt-1">
                             Promo Code
                         </div>
                         <div class="form-group">
-                            <select id="promocode" class="form-input" required>
+                            <select id="promo_code" name="promo_code" class="form-input" required>
                                 <option value="">Select Promo Code</option>
                                 <option value="promo1">Promo 1</option>
                                 <option value="promo2">Promo 2</option>
@@ -213,87 +214,146 @@
                             Payment Method
                         </div>
                         <!-- Payment Boxes -->
-                        <div class="payment-box" id="payment-box-1">
+                        <div class="payment-box" id="payment-1">
                             Payment Method 1
                         </div>
-                        <div class="payment-box" id="payment-box-2">
+                        <div class="payment-box" id="payment-2">
                             Payment Method 2
                         </div>
-                        <div class="payment-box" id="payment-box-3">
+                        <div class="payment-box" id="payment-3">
                             Payment Method 3
                         </div>
 
                         <!-- Total Price Section -->
                         <div class="total-price-section">
                             <div class="total-price-text">Total Price</div>
-                            <div class="price" id="total-price">Rp. 100.000</div>
+                            <div class="price">Rp.
+                                <input type="text" name="total_price" id="total_price" value="0" readonly>
+                            </div>
                             <div class="small-text"><b>Make sure your game data is correct. Game data input errors are not
                                     our responsibility.</b></div>
                             <div class="small-text">Price includes tax and administration fee</div>
                         </div>
 
+                        <input type="hidden" name="payment_method" id="payment_method" value="">
+                        <input type="hidden" name="product_name" id="product_name" value="">
+
                         <div class="form-group">
-                            <input type="submit" value="Pay Now" class="form-button">
+                            <button type="button" class="form-button" id="submitForm">Pay Now</button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
+
+    {{-- modal confirmation --}}
+    <div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content confirmation">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="confirmationModalLabel">Order Detail</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p id="confirmProduct_name"></p>
+                    <p id="confirmUser_id"></p>
+                    <p id="confirmServer"></p>
+                    <p id="confirmEmail"></p>
+                    <p id="confirmWhatsapp"></p>
+                    <p id="confirmPromo_code"></p>
+                    <p id="confirmPayment_method"></p>
+                    <p id="confirmTotal_price"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn__cancel" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn__confirm" id="confirmData">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{-- custom script --}}
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const cartButtons = document.querySelectorAll(".cart-button");
             const xmarkButtons = document.querySelectorAll(".xmark-button");
+            const productName = document.getElementById("product_name");
             let totalPrice = 0;
+            let activePriceListItem = null;
 
             const updateTotalPrice = () => {
-                document.getElementById('total-price').textContent =
-                    `Rp. ${totalPrice.toLocaleString('id-ID')}`;
+                document.getElementById('total_price').value = totalPrice.toLocaleString('id-ID');
             };
 
             cartButtons.forEach(button => {
-                button.addEventListener("click", function() {
+                button.addEventListener("click", function(event) {
                     const priceListItem = this.closest(".price-list");
 
-                    const priceElement = event.target.closest('.price-list-item').querySelector(
-                        '.price-list-price');
+                    // If there is already an active item, deactivate it
+                    if (activePriceListItem && activePriceListItem !== priceListItem) {
+                        deactivateItem(activePriceListItem);
+                    }
+
+                    const priceElement = priceListItem.querySelector('.price-list-price');
+                    const nameElement = priceListItem.querySelector('.price-list-text');
                     const price = parseInt(priceElement.getAttribute('data-price'), 10);
-                    totalPrice += price;
-                    updateTotalPrice();
+                    const name = nameElement.getAttribute('data-name');
 
-                    // Toggle the active class on the clicked item
-                    priceListItem.classList.toggle("active");
+                    if (!isNaN(price)) {
+                        totalPrice = price; // Set the price of the new active item
+                        updateTotalPrice();
+                    }
 
-                    // Toggle button visibility
+                    if (name) {
+                        product_name.value = name;
+                    }
+
+                    // Activate the clicked item
+                    priceListItem.classList.add("active");
                     this.style.display = 'none';
                     priceListItem.querySelector(".xmark-button").style.display = 'flex';
+
+                    // Set this item as the active one
+                    activePriceListItem = priceListItem;
                 });
             });
 
             xmarkButtons.forEach(button => {
-                button.addEventListener("click", function() {
+                button.addEventListener("click", function(event) {
                     const priceListItem = this.closest(".price-list");
 
-                    const priceElement = event.target.closest('.price-list-item').querySelector(
-                        '.price-list-price');
-                    const price = parseInt(priceElement.getAttribute('data-price'), 10);
-                    totalPrice -= price;
-                    updateTotalPrice();
+                    // Deactivate the current active item
+                    deactivateItem(priceListItem);
 
-                    // Toggle the active class on the clicked item
-                    priceListItem.classList.toggle("active");
-
-                    // Toggle button visibility
-                    this.style.display = 'none';
-                    priceListItem.querySelector(".cart-button").style.display = 'flex';
+                    // Clear the active item reference
+                    activePriceListItem = null;
                 });
             });
 
-            // update price
+            // Function to deactivate a price list item
+            const deactivateItem = (priceListItem) => {
+                const priceElement = priceListItem.querySelector('.price-list-price');
+                const price = parseInt(priceElement.getAttribute('data-price'), 10);
+
+                if (!isNaN(price)) {
+                    totalPrice -= price; // Subtract the price of the deactivated item
+                    updateTotalPrice();
+                }
+
+                priceListItem.classList.remove("active");
+                priceListItem.querySelector(".cart-button").style.display = 'flex';
+                priceListItem.querySelector(".xmark-button").style.display = 'none';
+            };
+
+            // Initialize price
             updateTotalPrice();
+
 
             // payment checklist
             const paymentBoxes = document.querySelectorAll('.payment-box');
+            const paymentMethod = document.getElementById('payment_method');
 
             paymentBoxes.forEach(box => {
                 box.addEventListener('click', () => {
@@ -301,7 +361,40 @@
                     paymentBoxes.forEach(box => box.classList.remove('active'));
                     // Add active class to the clicked box
                     box.classList.add('active');
+                    paymentMethod.value = box.id;
                 });
+            });
+
+            // confirmation modal
+            document.getElementById('submitForm').addEventListener('click', function() {
+                const user_id = document.getElementById('user_id').value;
+                const server = document.getElementById('server').value;
+                const email = document.getElementById('email').value;
+                const whatsapp = document.getElementById('whatsapp').value;
+                const payment_method = document.getElementById('payment_method').value;
+                const total_price = document.getElementById('total_price').value;
+                const product_name = document.getElementById('product_name').value;
+
+                document.getElementById('confirmUser_id').innerText = `User ID: ${user_id}`;
+                document.getElementById('confirmServer').innerText = `Server: ${server}`;
+                document.getElementById('confirmEmail').innerText = `Email: ${email}`;
+                document.getElementById('confirmWhatsapp').innerText = `Whatsapp: ${whatsapp}`;
+                document.getElementById('confirmPayment_method').innerText =
+                    `Payment Method: ${payment_method}`;
+                document.getElementById('confirmTotal_price').innerText = `Total Price: ${total_price}`;
+                document.getElementById('confirmProduct_name').innerText = `Product Name: ${product_name}`;
+
+                const confirmationModal = new bootstrap.Modal(document.getElementById('confirmationModal'));
+                confirmationModal.show();
+            });
+
+            // store data
+            document.getElementById('confirmData').addEventListener('click', function() {
+                alert('Data has been saved to the cart!');
+                const confirmationModal = bootstrap.Modal.getInstance(document.getElementById(
+                    'confirmationModal'));
+                confirmationModal.hide();
+                document.getElementById('userForm').reset();
             });
         });
     </script>

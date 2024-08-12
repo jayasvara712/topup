@@ -85,11 +85,11 @@
 
         <div class="login__group">
             <div>
-                <input type="email" placeholder="Write your email" id="email" class="login__input" />
+                <input type="email" placeholder="Write your email" name="email" class="login__input" />
             </div>
 
             <div>
-                <input type="password" placeholder="Enter your password" id="password" class="login__input" />
+                <input type="password" placeholder="Enter your password" name="password" class="login__input" />
             </div>
         </div>
 

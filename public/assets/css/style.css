@@ -341,17 +341,37 @@ a {
     color: var(--first-color);
 }
 
-.login__form .login__button {
+.login__form .login__button,
+.confirmation .btn__confirm {
     background-color: #aa0000;
     color: #ffffff;
     border: none;
     padding: 10px 20px;
     border-radius: 0;
-    width: 100%; /* Ensure buttons fit within the container */
+    width: 50%; /* Ensure buttons fit within the container */
     text-align: center;
 }
 
-.login__form .login__button:hover {
+.confirmation p {
+    color: #ffffff;
+}
+
+.confirmation .btn__cancel {
+    background-color: #515359;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 0;
+    width: 50%; /* Ensure buttons fit within the container */
+    text-align: center;
+}
+
+.confirmation .modal-footer {
+    flex-wrap: nowrap;
+}
+
+.login__form .login__button:hover,
+.confirmation .btn__confirm:hover {
     background-color: #cc0000;
     color: #ffffff;
 }

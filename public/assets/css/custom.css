@@ -327,10 +327,12 @@
     color: white; /* Text color */
 }
 
-.price {
+.price,
+.price input {
     font-size: 24px;
     margin: 5px 0; /* Space above and below the price */
     color: white; /* Text color */
+    background-color: transparent;
 }
 
 .small-text {
